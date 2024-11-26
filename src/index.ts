@@ -8,6 +8,8 @@ app.get('/', (c) => {
 
 export default app */
 
-import test, { optionTest } from "./openai";
-console.log(test(), optionTest);
-console.log(process.env.OPEN_AI_KEY);
+import ai from "./openai";
+import parser from "./parser";
+
+ai();
+parser();
