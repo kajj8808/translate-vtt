@@ -1,20 +1,21 @@
+import { DATA_SAMPLE_DIR } from "../lib/constants";
+import path from "path";
 import fs from "fs";
-
-const FOLDER_PATH = "data/sample/";
 
 const searchFileName = async () => {
   try {
-    const fileList = await fs.readdirSync(FOLDER_PATH);
+    const fileList = await fs.readdirSync(DATA_SAMPLE_DIR);
+    // FIXME: 차후 for문으로 수정.
     const fileName = fileList[0];
-    return `${FOLDER_PATH + fileName}`;
+    return path.join(DATA_SAMPLE_DIR, fileName);
   } catch (err) {
     console.error(err);
   }
 };
 
-const readFile = async (FILE_PATH: string) => {
+const readFile = async (filePath: string) => {
   try {
-    const data = await fs.readFileSync(FILE_PATH, "utf-8");
+    const data = await fs.readFileSync(filePath, "utf-8");
     return data;
   } catch (err) {
     console.error(err);

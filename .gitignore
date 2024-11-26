@@ -3,6 +3,5 @@ node_modules/
 .env
 bun.lockb
 
-
-
 data/sample/*
+data/sample_result/*

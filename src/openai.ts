@@ -1,6 +1,5 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { StringOutputParser } from "@langchain/core/output_parsers";
-
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
 const API_KEY = process.env.OPEN_AI_KEY;
