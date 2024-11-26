@@ -17,7 +17,7 @@ interface TransrateTextProps {
   text: string;
   dest: "Korea" | "Japan" | "English";
 }
-async function transrateText({ text, dest }: TransrateTextProps) {
+export async function transrateText({ text, dest }: TransrateTextProps) {
   const prompt = ChatPromptTemplate.fromMessages([
     [
       "system",
@@ -32,13 +32,5 @@ async function transrateText({ text, dest }: TransrateTextProps) {
     dest,
   });
 
-  console.log(result);
+  return result;
 }
-
-transrateText({ text: "石畳の上 でも惜しい", dest: "Korea" });
-
-function test() {
-  return "test text";
-}
-
-export default test;
