@@ -7,6 +7,7 @@ app.get('/', (c) => {
 })
 
 export default app */
+
 import test, { optionTest } from "./openai";
-console.log(test());
+console.log(test(), optionTest);
 console.log(process.env.OPEN_AI_KEY);
