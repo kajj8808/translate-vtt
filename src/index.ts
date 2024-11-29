@@ -1,4 +1,4 @@
-import { transrateText } from "./openai";
+import { transrateJapanAnimeText, transrateText } from "./openai";
 import parser from "./parser";
 import path from "path";
 import fs from "fs";
@@ -47,7 +47,10 @@ import { formatTime } from "../lib/utile";
 
     // WebVTT 형식에 맞게 변환
     newVTT += `${formatTime(startTime)} --> ${formatTime(endTime)}\n`;
-    const korText = await transrateText({ text: text, dest: "Korea" });
+    const korText = await transrateJapanAnimeText({
+      text: text,
+      dest: "Korea",
+    });
     console.log(korText);
     newVTT += `${korText}\n\n`;
   }
