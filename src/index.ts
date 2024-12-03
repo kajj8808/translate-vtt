@@ -42,3 +42,5 @@ import { formatTime } from "../lib/utile";
   );
   fs.writeFileSync(newPath, newVTT);
 })(); */
+
+import ffmpeg from "fluent-ffmpeg";
